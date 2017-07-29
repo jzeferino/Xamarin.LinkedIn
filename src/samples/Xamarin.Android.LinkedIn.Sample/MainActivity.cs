@@ -1,15 +1,15 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Com.Linkedin.Platform;
-using Com.Linkedin.Platform.Errors;
-using Com.Linkedin.Platform.Listeners;
+using LinkedIn.Platform;
+using LinkedIn.Platform.Errors;
+using LinkedIn.Platform.Listeners;
 using Android.Content;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Com.Linkedin.Platform.Utils;
+using LinkedIn.Platform.Utils;
 
 namespace Xamarin.Android.LinkedIn.Sample
 {

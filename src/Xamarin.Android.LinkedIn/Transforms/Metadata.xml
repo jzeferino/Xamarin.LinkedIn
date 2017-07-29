@@ -1,4 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<remove-node path="/api/package[@name='com.android.volley']" />
+	<remove-node path="/api/package[starts-with(@name,'com.android.volley')]" />
+	<attr path="/api/package[@name='com.linkedin.android.mobilesdk']" name="managedName">LinkedIn.Android.MobileSdk</attr>
+	<attr path="/api/package[@name='com.linkedin.platform']" name="managedName">LinkedIn.Platform</attr>
+	<attr path="/api/package[@name='com.linkedin.platform.errors']" name="managedName">LinkedIn.Platform.Errors</attr>
+	<attr path="/api/package[@name='com.linkedin.platform.internals']" name="managedName">LinkedIn.Platform.Internals</attr>
+	<attr path="/api/package[@name='com.linkedin.platform.listeners']" name="managedName">LinkedIn.Platform.Listeners</attr>
+	<attr path="/api/package[@name='com.linkedin.platform.utils']" name="managedName">LinkedIn.Platform.Utils</attr>
 </metadata>
