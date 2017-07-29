@@ -41,6 +41,17 @@ Task("Restore")
 		NuGetRestore(solutionFile);
 	});
 
+Task("Build")
+	.IsDependentOn("Clean")
+	.IsDependentOn("Restore")
+	.Does(() =>  
+	{	
+		DotNetBuild(solutionFile, settings => settings
+					.SetConfiguration(configuration)
+					.WithTarget("Build")
+					.SetVerbosity(Verbosity.Minimal));
+	});
+
 Task("Build-Android")
 	.IsDependentOn("Clean")
 	.IsDependentOn("Restore")
@@ -64,8 +75,7 @@ Task("Build-iOS")
 	});	
 
 Task ("NuGet")
-	.IsDependentOn ("Build-Android")
-	.IsDependentOn ("Build-iOS")	
+	.IsDependentOn ("Build")
 	.WithCriteria(isRunningOnAppVeyor)
 	.Does (() =>
 	{
