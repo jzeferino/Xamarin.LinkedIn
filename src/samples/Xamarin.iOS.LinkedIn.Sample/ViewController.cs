@@ -25,7 +25,10 @@ namespace Xamarin.iOS.LinkedIn.Sample
                 "state",
                 true,
                 returnState => GetProfilePhoto(),
-                error => _textView.Text = $"Sign in failed: {error.Description}"
+                error => InvokeOnMainThread(() => 
+                {
+                    _textView.Text = $"Sign in failed: {error.Description}";
+                })
             );
         }
 
@@ -33,7 +36,7 @@ namespace Xamarin.iOS.LinkedIn.Sample
         {
             var apiRequestUrl = "https://api.linkedin.com/v1/people/~/picture-urls::(original)?format=json";
             ApiHelper.SharedInstance.GetRequest(apiRequestUrl,
-                response =>
+                response => InvokeOnMainThread(() =>
                 {
                     var data = JsonConvert.DeserializeObject<ApiResponseData>(response.Data);
                     if (data != null && data.Values.Any())
@@ -45,8 +48,11 @@ namespace Xamarin.iOS.LinkedIn.Sample
                     {
                         _textView.Text = "Can't retrieve photo.";
                     }
-                },
-                apiError => _textView.Text = apiError.ToString()
+                }),
+                apiError => InvokeOnMainThread(() => 
+                {
+                    _textView.Text = apiError.ToString();
+                })
            );
         }
 

@@ -47,7 +47,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
         [Static]
         [Export("application:openURL:sourceApplication:annotation:")]
-        bool Application(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
 
         // +(BOOL)shouldHandleUrl:(NSURL *)url;
         [Static]
@@ -110,7 +110,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(id)errorWithApiResponse:(LISDKAPIResponse *)response;
         [Static]
         [Export("errorWithApiResponse:")]
-        ApiError FromError(ApiResponse response);
+        ApiError FromResponse(ApiResponse response);
 
         // +(id)errorWithError:(NSError *)error;
         [Static]
@@ -199,7 +199,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
         [Static]
         [Export("application:openURL:sourceApplication:annotation:")]
-        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
     }
 
     // typedef void (^DeeplinkSuccessBlock)(NSString *);
@@ -219,7 +219,7 @@ namespace Xamarin.iOS.LinkedIn
 
         // -(void)viewCurrentProfileWithState:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog success:(DeeplinkSuccessBlock)success error:(DeeplinkErrorBlock)error;
         [Export("viewCurrentProfileWithState:showGoToAppStoreDialog:success:error:")]
-        void ViewCurrentProfileWithState(string state, bool showDialog, DeeplinkSuccessBlock success, DeeplinkErrorBlock error);
+        void ViewCurrentProfile(string state, bool showDialog, DeeplinkSuccessBlock success, DeeplinkErrorBlock error);
 
         // -(void)viewOtherProfile:(NSString *)memberId withState:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog success:(DeeplinkSuccessBlock)success error:(DeeplinkErrorBlock)error;
         [Export("viewOtherProfile:withState:showGoToAppStoreDialog:success:error:")]
@@ -228,7 +228,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
         [Static]
         [Export("application:openURL:sourceApplication:annotation:")]
-        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
 
         // +(BOOL)shouldHandleUrl:(NSURL *)url;
         [Static]
