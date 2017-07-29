@@ -7,6 +7,8 @@
 
 using ObjCRuntime;
 
-[assembly: LinkWith("linkedin-sdk.a", LinkTarget.Simulator | LinkTarget.Simulator64 | LinkTarget.ArmV7 | LinkTarget.Arm64,
-    SmartLink = true,
-    ForceLoad = false)]
+[assembly: LinkWith("linkedin-sdk.a",
+                    LinkTarget.Simulator | LinkTarget.Simulator64 | LinkTarget.ArmV7 | LinkTarget.Arm64,
+                    LinkerFlags = "-ObjC",
+                    SmartLink = true,
+                    ForceLoad = false)]
