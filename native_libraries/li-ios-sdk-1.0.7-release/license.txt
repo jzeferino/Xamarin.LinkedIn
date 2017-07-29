@@ -1,0 +1,57 @@
+LinkedIn Mobile SDK for iOS End User License Agreement
+
+This End User License Agreement (“Agreement”) is entered into between LinkedIn Corporation (“LinkedIn”) with offices at 
+2029 Stierlin Court, Mountain View, California 94043 and you and governs your use of the LinkedIn Mobile Software 
+Development Kit for iOS.  The LinkedIn Mobile Software Development Kit for iOS (“iOS SDK”) consists of the software, 
+documentation and other materials (but expressly excluding the LinkedIn APIs) that LinkedIn may provide to you to enable, 
+among other things, integration of certain LinkedIn APIs into your iOS applications.  By using the iOS SDK, you agree to the 
+terms of this Agreement.  If you are using the iOS SDK on behalf of an entity, you represent and warrant that you have the 
+authority to bind such entity to this Agreement.  
+
+1. License Grant; Restrictions.  Subject to the terms of this Agreement, LinkedIn grants you a non-exclusive, worldwide, 
+royalty-free, transferable, sublicensable license to use, reproduce, prepare derivative works of, publicly display, publicly perform 
+and distribute the iOS SDK as necessary to develop, test and support your iOS applications and to enable the making of 
+authenticated calls to certain LinkedIn APIs in your iOS applications .  For clarity, your use of the LinkedIn APIs shall be 
+conditional on you entering into the LinkedIn API Terms of Use, the current version of which is located at 
+https://developer.linkedin.com/legal/api-terms-of-use, or another governing agreement with LinkedIn.  You agree not to: (i) 
+remove or alter any copyright, trademark or other proprietary rights notices contained on any material included in the iOS SDK; 
+or (ii) use the iOS SDK for any purpose that violates any law or any proprietary right of any person or that would expose 
+LinkedIn to legal liability.  Your use, reproduction and distribution of components of the iOS SDK that are licensed under an 
+open source software license are governed solely by the terms of that open source software license and not this Agreement.  
+
+2. Reservation of Rights.  Except for those limited rights expressly granted in Section 1, as between you and LinkedIn, 
+LinkedIn retains all right, title and interest in and to the iOS SDK including all intellectual property rights.  This Agreement does 
+not grant you permission to use the trade names, trademarks, service marks or brand names of LinkedIn, except to reproduce 
+attribution notices.  LinkedIn may update or modify the iOS SDK or stop providing the iOS SDK (or any portion thereof) in its 
+sole discretion, in each case without prior notice.
+
+3. Warranty Disclaimer.  THE IOS SDK IS PROVIDED “AS IS” AND LINKEDIN EXPRESSLY DISCLAIMS ALL 
+REPRESENTATIONS AND WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY 
+IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-
+INFRINGEMENT.  LINKEDIN DOES NOT REPRESENT OR WARRANT THAT THE IOS SDK IS FREE OF 
+INACCURACIES, ERRORS OR BUGS.  YOUR USE OF THE IOS SDK IS AT YOUR OWN RISK, AND YOU WILL BE 
+SOLELY RESPONSIBLE FOR ANY DAMAGE THAT RESULTS FROM YOUR USE THEREOF. 
+
+4. Limitation of Liability.  LINKEDIN AND ITS AFFILIATES SHALL NOT BE LIABLE TO YOU UNDER ANY LEGAL 
+THEORY (WHETHER IN TORT, CONTRACT OR OTHERWISE) FOR ANY INCIDENTAL, CONSEQUENTIAL, 
+INDIRECT, PUNITIVE OR SPECIAL DAMAGES RELATED TO THIS AGREEMENT OR THE IOS SDK, WHETHER OR 
+NOT LINKEDIN WAS AWARE OF THE POSSIBILITY OF SUCH DAMAGES.  THE TOTAL LIABILITY OF LINKEDIN 
+AND ITS AFFILIATES FOR DAMAGES UNDER THIS AGREEMENT WILL NOT EXCEED $100.  SOME 
+JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR 
+EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES AND ACCORDINGLY, SOME OF 
+THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. 
+
+5. General.  Either party may assign this Agreement, without consent, in connection with a reorganization, merger, 
+consolidation or sale of all or substantially all of such party’s assets or stock.  Subject to the foregoing, this Agreement will bind 
+and inure to the benefit of each party’s successors and permitted assigns.  This Agreement will be governed by and construed in 
+accordance with the laws of the State of California notwithstanding any conflicts of law principles and the United Nations 
+Convention for the International Sale of Goods, and any action or proceeding relating to this Agreement must be brought in a 
+federal or state court within Santa Clara County, California.  LinkedIn may notify you under this Agreement via postings on the 
+LinkedIn Developer Site, located at https://developer.linkedin.com/ or via the email address associated with your application or 
+LinkedIn member account.  You may contact us online or via mail or courier at: LinkedIn Corporation ATTN: Legal Department, 
+2029 Stierlin Court, Mountain View, CA 94043 USA.  Any notices that you provide without compliance with this section shall 
+have no legal effect.  If any provision of this Agreement is unenforceable, that provision will be modified to render it enforceable 
+to the extent possible to achieve the parties’ intention and the remaining provisions will not in any way be affected.  A party’s 
+waiver of any breach of this Agreement by the other party will not constitute a waiver of any rights or any subsequent breach of 
+the same or different provision.  This Agreement constitutes the entire agreement between the parties with respect to the subject 
+matter hereof, and this Agreement may be amended only in writing and signed by both parties.

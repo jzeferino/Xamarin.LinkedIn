@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5470BB811AEAEA0F00252A28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BB801AEAEA0F00252A28 /* main.m */; };
+		5470BB841AEAEA0F00252A28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BB831AEAEA0F00252A28 /* AppDelegate.m */; };
+		5470BB8C1AEAEA0F00252A28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5470BB8B1AEAEA0F00252A28 /* Images.xcassets */; };
+		5470BB9B1AEAEA0F00252A28 /* eventsappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BB9A1AEAEA0F00252A28 /* eventsappTests.m */; };
+		5470BBA71AEAEBC600252A28 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5470BBA61AEAEBC600252A28 /* linkedin-sdk.framework */; };
+		5470BBB61AEAEDAB00252A28 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BBAB1AEAEDAB00252A28 /* Event.m */; };
+		5470BBB71AEAEDAB00252A28 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BBAC1AEAEDAB00252A28 /* Person.m */; };
+		5470BBB81AEAEDAB00252A28 /* EventsDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BBAE1AEAEDAB00252A28 /* EventsDataCenter.m */; };
+		5470BBB91AEAEDAB00252A28 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BBB01AEAEDAB00252A28 /* ViewPagerController.m */; };
+		5470BBBA1AEAEDAB00252A28 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BBB21AEAEDAB00252A28 /* HostViewController.m */; };
+		5470BBBB1AEAEDAB00252A28 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470BBB41AEAEDAB00252A28 /* EventViewController.m */; };
+		5470BBBC1AEAEDAB00252A28 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5470BBB51AEAEDAB00252A28 /* EventViewController.xib */; };
+		548DE9011AEB09B100ED952F /* conference.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 548DE8FE1AEB09B100ED952F /* conference.jpg */; };
+		548DE9021AEB09B100ED952F /* ghost_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 548DE8FF1AEB09B100ED952F /* ghost_person.png */; };
+		548DE9031AEB09B100ED952F /* linkedin_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 548DE9001AEB09B100ED952F /* linkedin_login.png */; };
+		548DE9051AED9BEC00ED952F /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548DE9041AED9BEC00ED952F /* LoginView.xib */; };
+		548DE9071AED9C0D00ED952F /* AttendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548DE9061AED9C0D00ED952F /* AttendView.xib */; };
+		548DE9091AF0260C00ED952F /* linkedin_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 548DE9081AF0260C00ED952F /* linkedin_login.png */; };
+		548DE90B1AF028A700ED952F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 548DE90A1AF028A700ED952F /* logo.png */; };
+		548DE90F1AF0460700ED952F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548DE90D1AF0460700ED952F /* ProfileViewController.m */; };
+		548DE9101AF0460700ED952F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548DE90E1AF0460700ED952F /* ProfileViewController.xib */; };
+		548DE9121AF049B500ED952F /* AttendeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548DE9111AF049B500ED952F /* AttendeeCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5470BB951AEAEA0F00252A28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5470BB731AEAEA0F00252A28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5470BB7A1AEAEA0F00252A28;
+			remoteInfo = eventsapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5470BB7B1AEAEA0F00252A28 /* eventsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eventsapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5470BB7F1AEAEA0F00252A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5470BB801AEAEA0F00252A28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5470BB821AEAEA0F00252A28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5470BB831AEAEA0F00252A28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5470BB8B1AEAEA0F00252A28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5470BB941AEAEA0F00252A28 /* eventsappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eventsappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5470BB991AEAEA0F00252A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5470BB9A1AEAEA0F00252A28 /* eventsappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eventsappTests.m; sourceTree = "<group>"; };
+		5470BBA41AEAEB8B00252A28 /* liblinkedin-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "liblinkedin-sdk.a"; path = "../linkedin-sdk/build/Debug-iphoneos/liblinkedin-sdk.a"; sourceTree = "<group>"; };
+		5470BBA61AEAEBC600252A28 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "../linkedin-sdk.framework"; sourceTree = "<group>"; };
+		5470BBA91AEAEDAB00252A28 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		5470BBAA1AEAEDAB00252A28 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5470BBAB1AEAEDAB00252A28 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		5470BBAC1AEAEDAB00252A28 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5470BBAD1AEAEDAB00252A28 /* EventsDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataCenter.h; sourceTree = "<group>"; };
+		5470BBAE1AEAEDAB00252A28 /* EventsDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataCenter.m; sourceTree = "<group>"; };
+		5470BBAF1AEAEDAB00252A28 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
+		5470BBB01AEAEDAB00252A28 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
+		5470BBB11AEAEDAB00252A28 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
+		5470BBB21AEAEDAB00252A28 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		5470BBB31AEAEDAB00252A28 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		5470BBB41AEAEDAB00252A28 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		5470BBB51AEAEDAB00252A28 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		548DE8FE1AEB09B100ED952F /* conference.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = conference.jpg; sourceTree = "<group>"; };
+		548DE8FF1AEB09B100ED952F /* ghost_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost_person.png; sourceTree = "<group>"; };
+		548DE9001AEB09B100ED952F /* linkedin_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin_login.png; sourceTree = "<group>"; };
+		548DE9041AED9BEC00ED952F /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		548DE9061AED9C0D00ED952F /* AttendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendView.xib; sourceTree = "<group>"; };
+		548DE9081AF0260C00ED952F /* linkedin_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin_login.png; sourceTree = "<group>"; };
+		548DE90A1AF028A700ED952F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		548DE90C1AF0460700ED952F /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		548DE90D1AF0460700ED952F /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		548DE90E1AF0460700ED952F /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		548DE9111AF049B500ED952F /* AttendeeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeCell.m; sourceTree = "<group>"; };
+		548DE9131AF04A0400ED952F /* AttendeeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeCell.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5470BB781AEAEA0F00252A28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5470BBA71AEAEBC600252A28 /* linkedin-sdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5470BB911AEAEA0F00252A28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5470BB721AEAEA0F00252A28 = {
+			isa = PBXGroup;
+			children = (
+				5470BBA81AEAEBEA00252A28 /* Frameworks */,
+				5470BB7D1AEAEA0F00252A28 /* eventsapp */,
+				5470BB971AEAEA0F00252A28 /* eventsappTests */,
+				5470BB7C1AEAEA0F00252A28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5470BB7C1AEAEA0F00252A28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5470BB7B1AEAEA0F00252A28 /* eventsapp.app */,
+				5470BB941AEAEA0F00252A28 /* eventsappTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5470BB7D1AEAEA0F00252A28 /* eventsapp */ = {
+			isa = PBXGroup;
+			children = (
+				548DE8FD1AEB08D100ED952F /* Resources */,
+				5470BBBD1AEAEDB300252A28 /* Data */,
+				5470BBBE1AEAEDCB00252A28 /* ViewPager */,
+				5470BBBF1AEAEDDE00252A28 /* Controllers */,
+				5470BB821AEAEA0F00252A28 /* AppDelegate.h */,
+				5470BB831AEAEA0F00252A28 /* AppDelegate.m */,
+				5470BB8B1AEAEA0F00252A28 /* Images.xcassets */,
+				5470BB7E1AEAEA0F00252A28 /* Supporting Files */,
+			);
+			path = eventsapp;
+			sourceTree = "<group>";
+		};
+		5470BB7E1AEAEA0F00252A28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5470BB7F1AEAEA0F00252A28 /* Info.plist */,
+				5470BB801AEAEA0F00252A28 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5470BB971AEAEA0F00252A28 /* eventsappTests */ = {
+			isa = PBXGroup;
+			children = (
+				5470BB9A1AEAEA0F00252A28 /* eventsappTests.m */,
+				5470BB981AEAEA0F00252A28 /* Supporting Files */,
+			);
+			path = eventsappTests;
+			sourceTree = "<group>";
+		};
+		5470BB981AEAEA0F00252A28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5470BB991AEAEA0F00252A28 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5470BBA81AEAEBEA00252A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5470BBA61AEAEBC600252A28 /* linkedin-sdk.framework */,
+				5470BBA41AEAEB8B00252A28 /* liblinkedin-sdk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5470BBBD1AEAEDB300252A28 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5470BBA91AEAEDAB00252A28 /* Event.h */,
+				5470BBAA1AEAEDAB00252A28 /* Person.h */,
+				5470BBAB1AEAEDAB00252A28 /* Event.m */,
+				5470BBAC1AEAEDAB00252A28 /* Person.m */,
+				5470BBAD1AEAEDAB00252A28 /* EventsDataCenter.h */,
+				5470BBAE1AEAEDAB00252A28 /* EventsDataCenter.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		5470BBBE1AEAEDCB00252A28 /* ViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				5470BBAF1AEAEDAB00252A28 /* ViewPagerController.h */,
+				5470BBB01AEAEDAB00252A28 /* ViewPagerController.m */,
+			);
+			name = ViewPager;
+			sourceTree = "<group>";
+		};
+		5470BBBF1AEAEDDE00252A28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5470BBB11AEAEDAB00252A28 /* HostViewController.h */,
+				5470BBB21AEAEDAB00252A28 /* HostViewController.m */,
+				5470BBB31AEAEDAB00252A28 /* EventViewController.h */,
+				5470BBB41AEAEDAB00252A28 /* EventViewController.m */,
+				5470BBB51AEAEDAB00252A28 /* EventViewController.xib */,
+				548DE9041AED9BEC00ED952F /* LoginView.xib */,
+				548DE9061AED9C0D00ED952F /* AttendView.xib */,
+				548DE90C1AF0460700ED952F /* ProfileViewController.h */,
+				548DE90D1AF0460700ED952F /* ProfileViewController.m */,
+				548DE90E1AF0460700ED952F /* ProfileViewController.xib */,
+				548DE9111AF049B500ED952F /* AttendeeCell.m */,
+				548DE9131AF04A0400ED952F /* AttendeeCell.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		548DE8FD1AEB08D100ED952F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				548DE90A1AF028A700ED952F /* logo.png */,
+				548DE9081AF0260C00ED952F /* linkedin_login.png */,
+				548DE8FE1AEB09B100ED952F /* conference.jpg */,
+				548DE8FF1AEB09B100ED952F /* ghost_person.png */,
+				548DE9001AEB09B100ED952F /* linkedin_login.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5470BB7A1AEAEA0F00252A28 /* eventsapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5470BB9E1AEAEA0F00252A28 /* Build configuration list for PBXNativeTarget "eventsapp" */;
+			buildPhases = (
+				5470BB771AEAEA0F00252A28 /* Sources */,
+				5470BB781AEAEA0F00252A28 /* Frameworks */,
+				5470BB791AEAEA0F00252A28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eventsapp;
+			productName = eventsapp;
+			productReference = 5470BB7B1AEAEA0F00252A28 /* eventsapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5470BB931AEAEA0F00252A28 /* eventsappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5470BBA11AEAEA0F00252A28 /* Build configuration list for PBXNativeTarget "eventsappTests" */;
+			buildPhases = (
+				5470BB901AEAEA0F00252A28 /* Sources */,
+				5470BB911AEAEA0F00252A28 /* Frameworks */,
+				5470BB921AEAEA0F00252A28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5470BB961AEAEA0F00252A28 /* PBXTargetDependency */,
+			);
+			name = eventsappTests;
+			productName = eventsappTests;
+			productReference = 5470BB941AEAEA0F00252A28 /* eventsappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5470BB731AEAEA0F00252A28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "LinkedIn Corporation";
+				TargetAttributes = {
+					5470BB7A1AEAEA0F00252A28 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					5470BB931AEAEA0F00252A28 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 5470BB7A1AEAEA0F00252A28;
+					};
+				};
+			};
+			buildConfigurationList = 5470BB761AEAEA0F00252A28 /* Build configuration list for PBXProject "eventsapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5470BB721AEAEA0F00252A28;
+			productRefGroup = 5470BB7C1AEAEA0F00252A28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5470BB7A1AEAEA0F00252A28 /* eventsapp */,
+				5470BB931AEAEA0F00252A28 /* eventsappTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5470BB791AEAEA0F00252A28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5470BBBC1AEAEDAB00252A28 /* EventViewController.xib in Resources */,
+				5470BB8C1AEAEA0F00252A28 /* Images.xcassets in Resources */,
+				548DE90B1AF028A700ED952F /* logo.png in Resources */,
+				548DE9051AED9BEC00ED952F /* LoginView.xib in Resources */,
+				548DE9091AF0260C00ED952F /* linkedin_login.png in Resources */,
+				548DE9071AED9C0D00ED952F /* AttendView.xib in Resources */,
+				548DE9031AEB09B100ED952F /* linkedin_login.png in Resources */,
+				548DE9021AEB09B100ED952F /* ghost_person.png in Resources */,
+				548DE9101AF0460700ED952F /* ProfileViewController.xib in Resources */,
+				548DE9011AEB09B100ED952F /* conference.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5470BB921AEAEA0F00252A28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5470BB771AEAEA0F00252A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5470BBB61AEAEDAB00252A28 /* Event.m in Sources */,
+				548DE90F1AF0460700ED952F /* ProfileViewController.m in Sources */,
+				5470BBB91AEAEDAB00252A28 /* ViewPagerController.m in Sources */,
+				5470BBBB1AEAEDAB00252A28 /* EventViewController.m in Sources */,
+				5470BBB71AEAEDAB00252A28 /* Person.m in Sources */,
+				548DE9121AF049B500ED952F /* AttendeeCell.m in Sources */,
+				5470BBBA1AEAEDAB00252A28 /* HostViewController.m in Sources */,
+				5470BB841AEAEA0F00252A28 /* AppDelegate.m in Sources */,
+				5470BB811AEAEA0F00252A28 /* main.m in Sources */,
+				5470BBB81AEAEDAB00252A28 /* EventsDataCenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5470BB901AEAEA0F00252A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5470BB9B1AEAEA0F00252A28 /* eventsappTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5470BB961AEAEA0F00252A28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5470BB7A1AEAEA0F00252A28 /* eventsapp */;
+			targetProxy = 5470BB951AEAEA0F00252A28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5470BB9C1AEAEA0F00252A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5470BB9D1AEAEA0F00252A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5470BB9F1AEAEA0F00252A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../linkedin-sdk.framework/Headers";
+				INFOPLIST_FILE = eventsapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../linkedin-sdk.framework/Versions/A",
+				);
+				"OTHER_CFLAGS[arch=*]" = "-fstack-protector-all";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5470BBA01AEAEA0F00252A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../linkedin-sdk.framework/Headers";
+				INFOPLIST_FILE = eventsapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../linkedin-sdk.framework/Versions/A",
+				);
+				"OTHER_CFLAGS[arch=*]" = "-fstack-protector-all";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5470BBA21AEAEA0F00252A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eventsappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eventsapp.app/eventsapp";
+			};
+			name = Debug;
+		};
+		5470BBA31AEAEA0F00252A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eventsappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eventsapp.app/eventsapp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5470BB761AEAEA0F00252A28 /* Build configuration list for PBXProject "eventsapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5470BB9C1AEAEA0F00252A28 /* Debug */,
+				5470BB9D1AEAEA0F00252A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5470BB9E1AEAEA0F00252A28 /* Build configuration list for PBXNativeTarget "eventsapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5470BB9F1AEAEA0F00252A28 /* Debug */,
+				5470BBA01AEAEA0F00252A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5470BBA11AEAEA0F00252A28 /* Build configuration list for PBXNativeTarget "eventsappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5470BBA21AEAEA0F00252A28 /* Debug */,
+				5470BBA31AEAEA0F00252A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5470BB731AEAEA0F00252A28 /* Project object */;
+}

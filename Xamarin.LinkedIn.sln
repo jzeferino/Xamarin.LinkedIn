@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C5E1D09B-6AD8-46D4-9873-40E9FC89AAB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Android.LinkedIn", "src\Xamarin.Android.LinkedIn\Xamarin.Android.LinkedIn.csproj", "{4AF690B5-0597-46B2-927D-82B7F8249C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.iOS.LinkedIn", "src\Xamarin.iOS.LinkedIn\Xamarin.iOS.LinkedIn.csproj", "{C7421E15-A5E8-4356-923F-5F2DB02D7F7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AF690B5-0597-46B2-927D-82B7F8249C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF690B5-0597-46B2-927D-82B7F8249C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF690B5-0597-46B2-927D-82B7F8249C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF690B5-0597-46B2-927D-82B7F8249C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7421E15-A5E8-4356-923F-5F2DB02D7F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7421E15-A5E8-4356-923F-5F2DB02D7F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7421E15-A5E8-4356-923F-5F2DB02D7F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7421E15-A5E8-4356-923F-5F2DB02D7F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AF690B5-0597-46B2-927D-82B7F8249C31} = {C5E1D09B-6AD8-46D4-9873-40E9FC89AAB6}
+		{C7421E15-A5E8-4356-923F-5F2DB02D7F7E} = {C5E1D09B-6AD8-46D4-9873-40E9FC89AAB6}
+	EndGlobalSection
+EndGlobal
