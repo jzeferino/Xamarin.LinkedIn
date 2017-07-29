@@ -43,7 +43,7 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidKeyStore>True</AndroidKeyStore>
-    <AndroidSigningKeyStore>/Users/jz/Desktop/development/repositories/github/Xamarin.LinkedIn/src/samples/Xamarin.Android.LinkedIn.Sample/debug.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyStore>debug.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>android</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>androiddebugkey</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>android</AndroidSigningKeyPass>
