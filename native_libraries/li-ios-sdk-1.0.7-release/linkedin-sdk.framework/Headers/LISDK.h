@@ -7,6 +7,8 @@
 #ifndef LISDK_h
 #define LISDK_h
 
+#import <Foundation/Foundation.h>
+
 /**
  file for application to include to interact with LinkedIn SDK for ios.
  
@@ -28,15 +30,16 @@
  2. use LISDKAPIHelper or LISDKDeeplinkHelper to make API calls or to perform deep link operations
  
  */
-#include <linkedin-sdk/LISDKSessionManager.h>
-#include <linkedin-sdk/LISDKSession.h>
-#include <linkedin-sdk/LISDKAccessToken.h>
-#include <linkedin-sdk/LISDKAPIError.h>
-#include <linkedin-sdk/LISDKAPIHelper.h>
-#include <linkedin-sdk/LISDKAPIResponse.h>
-#include <linkedin-sdk/LISDKCallbackHandler.h>
-#include <linkedin-sdk/LISDKDeeplinkHelper.h>
-#include <linkedin-sdk/LISDKErrorCode.h>
-#include <linkedin-sdk/LISDKPermission.h>
+
+#include "LISDKSessionManager.h"
+#include "LISDKSession.h"
+#include "LISDKAccessToken.h"
+#include "LISDKAPIError.h"
+#include "LISDKAPIHelper.h"
+#include "LISDKAPIResponse.h"
+#include "LISDKCallbackHandler.h"
+#include "LISDKDeeplinkHelper.h"
+#include "LISDKErrorCode.h"
+#include "LISDKPermission.h"
 
 #endif
