@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.iOS.LinkedIn</id>
+    <version>$version$</version>
+    <title>Xamarin.iOS.LinkedIn</title>
+    <authors>jzeferino</authors>
+    <licenseUrl>https://github.com/jzeferino/Xamarin.LinkedId/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jzeferino/Xamarin.LinkedIn</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Xamarin.iOS.LinkedIn binding library.</description>    
+    <tags>xamarin, linkedIn</tags>
+  </metadata>
+  <files>
+    <file src="src/Xamarin.iOS.LinkedIn/bin/Release/Xamarin.iOS.LinkedIn.dll" target="lib/Xamarin.iOS10/Xamarin.iOS.LinkedIn.dll" />
+  </files>
+</package>
