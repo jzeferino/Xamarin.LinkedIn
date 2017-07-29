@@ -2,7 +2,6 @@ using System;
 using Foundation;
 using ObjCRuntime;
 using UIKit;
-using linkedin-sdk;
 
 namespace Xamarin.iOS.LinkedIn
 {
@@ -13,28 +12,27 @@ namespace Xamarin.iOS.LinkedIn
     delegate void AuthErrorBlock(NSError arg0);
 
     // @interface LISDKSessionManager : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKSessionManager
+    [BaseType(typeof(NSObject), Name = "LISDKSessionManager")]
+    interface SessionManager
     {
         // +(instancetype)sharedInstance;
         [Static]
         [Export("sharedInstance")]
-        LISDKSessionManager SharedInstance();
+        SessionManager SharedInstance();
 
         // @property (readonly, nonatomic) LISDKSession * session;
         [Export("session")]
-        LISDKSession Session { get; }
+        Session Session { get; }
 
         // +(void)createSessionWithAuth:(NSArray *)permissions state:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog successBlock:(AuthSuccessBlock)successBlock errorBlock:(AuthErrorBlock)erroBlock;
         [Static]
         [Export("createSessionWithAuth:state:showGoToAppStoreDialog:successBlock:errorBlock:")]
-        [Verify(StronglyTypedNSArray)]
         void CreateSessionWithAuth(NSObject[] permissions, string state, bool showDialog, AuthSuccessBlock successBlock, AuthErrorBlock erroBlock);
 
         // +(void)createSessionWithAccessToken:(LISDKAccessToken *)accessToken;
         [Static]
         [Export("createSessionWithAccessToken:")]
-        void CreateSessionWithAccessToken(LISDKAccessToken accessToken);
+        void CreateSessionWithAccessToken(AccessToken accessToken);
 
         // +(void)clearSession;
         [Static]
@@ -44,7 +42,6 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)hasValidSession;
         [Static]
         [Export("hasValidSession")]
-        [Verify(MethodToProperty)]
         bool HasValidSession { get; }
 
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
@@ -59,27 +56,25 @@ namespace Xamarin.iOS.LinkedIn
     }
 
     // @interface LISDKSession : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKSession
+    [BaseType(typeof(NSObject), Name = "LISDKSession")]
+    interface Session
     {
         // @property (nonatomic, strong) LISDKAccessToken * accessToken;
         [Export("accessToken", ArgumentSemantic.Strong)]
-        LISDKAccessToken AccessToken { get; set; }
+        AccessToken AccessToken { get; set; }
 
         // -(BOOL)isValid;
         [Export("isValid")]
-        [Verify(MethodToProperty)]
         bool IsValid { get; }
 
         // -(NSString *)value;
         [Export("value")]
-        [Verify(MethodToProperty)]
         string Value { get; }
     }
 
     // @interface LISDKAccessToken : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKAccessToken
+    [BaseType(typeof(NSObject), Name = "LISDKAccessToken")]
+    interface AccessToken
     {
         // @property (readonly, nonatomic) NSString * accessTokenValue;
         [Export("accessTokenValue")]
@@ -92,32 +87,30 @@ namespace Xamarin.iOS.LinkedIn
         // +(instancetype)LISDKAccessTokenWithValue:(NSString *)value expiresOnMillis:(long long)expiresOnMillis;
         [Static]
         [Export("LISDKAccessTokenWithValue:expiresOnMillis:")]
-        LISDKAccessToken LISDKAccessTokenWithValue(string value, long expiresOnMillis);
+        AccessToken LISDKAccessTokenWithValue(string value, long expiresOnMillis);
 
         // +(instancetype)LISDKAccessTokenWithSerializedString:(NSString *)serString;
         [Static]
         [Export("LISDKAccessTokenWithSerializedString:")]
-        LISDKAccessToken LISDKAccessTokenWithSerializedString(string serString);
+        AccessToken LISDKAccessTokenWithSerializedString(string serString);
 
         // -(NSString *)serializedString;
         [Export("serializedString")]
-        [Verify(MethodToProperty)]
         string SerializedString { get; }
     }
 
     // @interface LISDKAPIError : NSError
-    [BaseType(typeof(NSError))]
-    interface LISDKAPIError
+    [BaseType(typeof(NSError), Name = "LISDKAPIError")]
+    interface APIError
     {
         // -(LISDKAPIResponse *)errorResponse;
         [Export("errorResponse")]
-        [Verify(MethodToProperty)]
-        LISDKAPIResponse ErrorResponse { get; }
+        APIResponse ErrorResponse { get; }
 
         // +(id)errorWithApiResponse:(LISDKAPIResponse *)response;
         [Static]
         [Export("errorWithApiResponse:")]
-        NSObject ErrorWithApiResponse(LISDKAPIResponse response);
+        NSObject ErrorWithApiResponse(APIResponse response);
 
         // +(id)errorWithError:(NSError *)error;
         [Static]
@@ -126,10 +119,10 @@ namespace Xamarin.iOS.LinkedIn
     }
 
     // typedef void (^APISuccessBlock)(LISDKAPIResponse *);
-    delegate void APISuccessBlock(LISDKAPIResponse arg0);
+    delegate void APISuccessBlock(APIResponse arg0);
 
     // typedef void (^APIErrorBlock)(LISDKAPIResponse *, NSError *);
-    delegate void APIErrorBlock(LISDKAPIResponse arg0, NSError arg1);
+    delegate void APIErrorBlock(APIResponse arg0, NSError arg1);
 
     // @interface LISDKAPIHelper : NSObject
     [BaseType(typeof(NSObject))]
@@ -142,31 +135,31 @@ namespace Xamarin.iOS.LinkedIn
 
         // -(void)getRequest:(NSString *)url success:(void (^)(LISDKAPIResponse *))success error:(void (^)(LISDKAPIError *))error;
         [Export("getRequest:success:error:")]
-        void GetRequest(string url, Action<LISDKAPIResponse> success, Action<LISDKAPIError> error);
+        void GetRequest(string url, Action<APIResponse> success, Action<APIError> error);
 
         // -(void)deleteRequest:(NSString *)url success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("deleteRequest:success:error:")]
-        void DeleteRequest(string url, Action<LISDKAPIResponse> successCompletion, Action<LISDKAPIError> errorCompletion);
+        void DeleteRequest(string url, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
 
         // -(void)putRequest:(NSString *)url body:(NSData *)body success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("putRequest:body:success:error:")]
-        void PutRequest(string url, NSData body, Action<LISDKAPIResponse> successCompletion, Action<LISDKAPIError> errorCompletion);
+        void PutRequest(string url, NSData body, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
 
         // -(void)putRequest:(NSString *)url stringBody:(NSString *)stringBody success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("putRequest:stringBody:success:error:")]
-        void PutRequest(string url, string stringBody, Action<LISDKAPIResponse> successCompletion, Action<LISDKAPIError> errorCompletion);
+        void PutRequest(string url, string stringBody, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
 
         // -(void)postRequest:(NSString *)url body:(NSData *)body success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("postRequest:body:success:error:")]
-        void PostRequest(string url, NSData body, Action<LISDKAPIResponse> successCompletion, Action<LISDKAPIError> errorCompletion);
+        void PostRequest(string url, NSData body, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
 
         // -(void)postRequest:(NSString *)url stringBody:(NSString *)stringBody success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("postRequest:stringBody:success:error:")]
-        void PostRequest(string url, string stringBody, Action<LISDKAPIResponse> successCompletion, Action<LISDKAPIError> errorCompletion);
+        void PostRequest(string url, string stringBody, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
 
         // -(void)apiRequest:(NSString *)url method:(NSString *)method body:(NSData *)body success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("apiRequest:method:body:success:error:")]
-        void ApiRequest(string url, string method, NSData body, Action<LISDKAPIResponse> successCompletion, Action<LISDKAPIError> errorCompletion);
+        void ApiRequest(string url, string method, NSData body, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
 
         // -(void)cancelCalls;
         [Export("cancelCalls")]
@@ -174,8 +167,8 @@ namespace Xamarin.iOS.LinkedIn
     }
 
     // @interface LISDKAPIResponse : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKAPIResponse
+    [BaseType(typeof(NSObject), Name = "LISDKAPIResponse")]
+    interface APIResponse
     {
         // @property (readonly, nonatomic) NSString * data;
         [Export("data")]
@@ -195,8 +188,8 @@ namespace Xamarin.iOS.LinkedIn
     }
 
     // @interface LISDKCallbackHandler : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKCallbackHandler
+    [BaseType(typeof(NSObject), Name = "LISDKCallbackHandler")]
+    interface CallbackHandler
     {
         // +(BOOL)shouldHandleUrl:(NSURL *)url;
         [Static]
@@ -216,13 +209,13 @@ namespace Xamarin.iOS.LinkedIn
     delegate void DeeplinkErrorBlock(NSError arg0, string arg1);
 
     // @interface LISDKDeeplinkHelper : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKDeeplinkHelper
+    [BaseType(typeof(NSObject), Name = "LISDKDeeplinkHelper")]
+    interface DeeplinkHelper
     {
         // +(instancetype)sharedInstance;
         [Static]
         [Export("sharedInstance")]
-        LISDKDeeplinkHelper SharedInstance();
+        DeeplinkHelper SharedInstance();
 
         // -(void)viewCurrentProfileWithState:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog success:(DeeplinkSuccessBlock)success error:(DeeplinkErrorBlock)error;
         [Export("viewCurrentProfileWithState:showGoToAppStoreDialog:success:error:")]
