@@ -18,7 +18,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(instancetype)sharedInstance;
         [Static]
         [Export("sharedInstance")]
-        SessionManager SharedInstance();
+        SessionManager SharedInstance { get; }
 
         // @property (readonly, nonatomic) LISDKSession * session;
         [Export("session")]
@@ -27,7 +27,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(void)createSessionWithAuth:(NSArray *)permissions state:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog successBlock:(AuthSuccessBlock)successBlock errorBlock:(AuthErrorBlock)erroBlock;
         [Static]
         [Export("createSessionWithAuth:state:showGoToAppStoreDialog:successBlock:errorBlock:")]
-        void CreateSessionWithAuth(NSObject[] permissions, string state, bool showDialog, AuthSuccessBlock successBlock, AuthErrorBlock erroBlock);
+        void CreateSessionWithAuth(string[] permissions, string state, bool showDialog, AuthSuccessBlock successBlock, AuthErrorBlock erroBlock);
 
         // +(void)createSessionWithAccessToken:(LISDKAccessToken *)accessToken;
         [Static]
@@ -47,7 +47,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
         [Static]
         [Export("application:openURL:sourceApplication:annotation:")]
-        bool Application(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
 
         // +(BOOL)shouldHandleUrl:(NSURL *)url;
         [Static]
@@ -87,12 +87,12 @@ namespace Xamarin.iOS.LinkedIn
         // +(instancetype)LISDKAccessTokenWithValue:(NSString *)value expiresOnMillis:(long long)expiresOnMillis;
         [Static]
         [Export("LISDKAccessTokenWithValue:expiresOnMillis:")]
-        AccessToken LISDKAccessTokenWithValue(string value, long expiresOnMillis);
+        AccessToken FromValue(string value, long expiresOnMillis);
 
         // +(instancetype)LISDKAccessTokenWithSerializedString:(NSString *)serString;
         [Static]
         [Export("LISDKAccessTokenWithSerializedString:")]
-        AccessToken LISDKAccessTokenWithSerializedString(string serString);
+        AccessToken FromSerializedString(string serString);
 
         // -(NSString *)serializedString;
         [Export("serializedString")]
@@ -101,65 +101,65 @@ namespace Xamarin.iOS.LinkedIn
 
     // @interface LISDKAPIError : NSError
     [BaseType(typeof(NSError), Name = "LISDKAPIError")]
-    interface APIError
+    interface ApiError
     {
         // -(LISDKAPIResponse *)errorResponse;
         [Export("errorResponse")]
-        APIResponse ErrorResponse { get; }
+        ApiResponse ErrorResponse { get; }
 
         // +(id)errorWithApiResponse:(LISDKAPIResponse *)response;
         [Static]
         [Export("errorWithApiResponse:")]
-        NSObject ErrorWithApiResponse(APIResponse response);
+        ApiError FromResponse(ApiResponse response);
 
         // +(id)errorWithError:(NSError *)error;
         [Static]
         [Export("errorWithError:")]
-        NSObject ErrorWithError(NSError error);
+        ApiError FromError(NSError error);
     }
 
     // typedef void (^APISuccessBlock)(LISDKAPIResponse *);
-    delegate void APISuccessBlock(APIResponse arg0);
+    delegate void APISuccessBlock(ApiResponse arg0);
 
     // typedef void (^APIErrorBlock)(LISDKAPIResponse *, NSError *);
-    delegate void APIErrorBlock(APIResponse arg0, NSError arg1);
+    delegate void APIErrorBlock(ApiResponse arg0, NSError arg1);
 
     // @interface LISDKAPIHelper : NSObject
-    [BaseType(typeof(NSObject))]
-    interface LISDKAPIHelper
+    [BaseType(typeof(NSObject), Name = "LISDKAPIHelper")]
+    interface ApiHelper
     {
         // +(instancetype)sharedInstance;
         [Static]
         [Export("sharedInstance")]
-        LISDKAPIHelper SharedInstance();
+        ApiHelper SharedInstance { get; }
 
         // -(void)getRequest:(NSString *)url success:(void (^)(LISDKAPIResponse *))success error:(void (^)(LISDKAPIError *))error;
         [Export("getRequest:success:error:")]
-        void GetRequest(string url, Action<APIResponse> success, Action<APIError> error);
+        void GetRequest(string url, Action<ApiResponse> success, Action<ApiError> error);
 
         // -(void)deleteRequest:(NSString *)url success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("deleteRequest:success:error:")]
-        void DeleteRequest(string url, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
+        void DeleteRequest(string url, Action<ApiResponse> successCompletion, Action<ApiError> errorCompletion);
 
         // -(void)putRequest:(NSString *)url body:(NSData *)body success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("putRequest:body:success:error:")]
-        void PutRequest(string url, NSData body, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
+        void PutRequest(string url, NSData body, Action<ApiResponse> successCompletion, Action<ApiError> errorCompletion);
 
         // -(void)putRequest:(NSString *)url stringBody:(NSString *)stringBody success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("putRequest:stringBody:success:error:")]
-        void PutRequest(string url, string stringBody, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
+        void PutRequest(string url, string stringBody, Action<ApiResponse> successCompletion, Action<ApiError> errorCompletion);
 
         // -(void)postRequest:(NSString *)url body:(NSData *)body success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("postRequest:body:success:error:")]
-        void PostRequest(string url, NSData body, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
+        void PostRequest(string url, NSData body, Action<ApiResponse> successCompletion, Action<ApiError> errorCompletion);
 
         // -(void)postRequest:(NSString *)url stringBody:(NSString *)stringBody success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("postRequest:stringBody:success:error:")]
-        void PostRequest(string url, string stringBody, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
+        void PostRequest(string url, string stringBody, Action<ApiResponse> successCompletion, Action<ApiError> errorCompletion);
 
         // -(void)apiRequest:(NSString *)url method:(NSString *)method body:(NSData *)body success:(void (^)(LISDKAPIResponse *))successCompletion error:(void (^)(LISDKAPIError *))errorCompletion;
         [Export("apiRequest:method:body:success:error:")]
-        void ApiRequest(string url, string method, NSData body, Action<APIResponse> successCompletion, Action<APIError> errorCompletion);
+        void ApiRequest(string url, string method, NSData body, Action<ApiResponse> successCompletion, Action<ApiError> errorCompletion);
 
         // -(void)cancelCalls;
         [Export("cancelCalls")]
@@ -168,7 +168,7 @@ namespace Xamarin.iOS.LinkedIn
 
     // @interface LISDKAPIResponse : NSObject
     [BaseType(typeof(NSObject), Name = "LISDKAPIResponse")]
-    interface APIResponse
+    interface ApiResponse
     {
         // @property (readonly, nonatomic) NSString * data;
         [Export("data")]
@@ -199,7 +199,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
         [Static]
         [Export("application:openURL:sourceApplication:annotation:")]
-        bool Application(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
     }
 
     // typedef void (^DeeplinkSuccessBlock)(NSString *);
@@ -215,11 +215,11 @@ namespace Xamarin.iOS.LinkedIn
         // +(instancetype)sharedInstance;
         [Static]
         [Export("sharedInstance")]
-        DeeplinkHelper SharedInstance();
+        DeeplinkHelper SharedInstance { get; }
 
         // -(void)viewCurrentProfileWithState:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog success:(DeeplinkSuccessBlock)success error:(DeeplinkErrorBlock)error;
         [Export("viewCurrentProfileWithState:showGoToAppStoreDialog:success:error:")]
-        void ViewCurrentProfileWithState(string state, bool showDialog, DeeplinkSuccessBlock success, DeeplinkErrorBlock error);
+        void ViewCurrentProfile(string state, bool showDialog, DeeplinkSuccessBlock success, DeeplinkErrorBlock error);
 
         // -(void)viewOtherProfile:(NSString *)memberId withState:(NSString *)state showGoToAppStoreDialog:(BOOL)showDialog success:(DeeplinkSuccessBlock)success error:(DeeplinkErrorBlock)error;
         [Export("viewOtherProfile:withState:showGoToAppStoreDialog:success:error:")]
@@ -228,7 +228,7 @@ namespace Xamarin.iOS.LinkedIn
         // +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
         [Static]
         [Export("application:openURL:sourceApplication:annotation:")]
-        bool Application(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+        bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
 
         // +(BOOL)shouldHandleUrl:(NSURL *)url;
         [Static]

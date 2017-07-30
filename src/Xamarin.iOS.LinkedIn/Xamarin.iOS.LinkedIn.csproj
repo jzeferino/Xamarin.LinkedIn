@@ -37,12 +37,16 @@
     <Compile Include="linkedin-sdk.linkwith.cs">
       <DependentUpon>linkedin-sdk.a</DependentUpon>
     </Compile>
+    <Compile Include="Aditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="linkedin-sdk.a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
