@@ -21,7 +21,7 @@ namespace Xamarin.iOS.LinkedIn.Sample
         private void SignIn(object sender, EventArgs e)
         {
             SessionManager.CreateSessionWithAuth(
-                new[] { Permission.BasicProfile, Permission.EmailAddress },
+                new[] { Permission.BasicProfile },
                 "state",
                 true,
                 // NOTE: success callbacks aren't called in main thread.
