@@ -24,11 +24,9 @@ namespace Xamarin.iOS.LinkedIn.Sample
                 new[] { Permission.BasicProfile, Permission.EmailAddress },
                 "state",
                 true,
+                // NOTE: success callbacks aren't called in main thread.
                 returnState => GetProfilePhoto(),
-                error => InvokeOnMainThread(() => 
-                {
-                    _textView.Text = $"Sign in failed: {error.Description}";
-                })
+                error => _textView.Text = $"Sign in failed: {error.Description}"
             );
         }
 
@@ -36,6 +34,7 @@ namespace Xamarin.iOS.LinkedIn.Sample
         {
             var apiRequestUrl = "https://api.linkedin.com/v1/people/~/picture-urls::(original)?format=json";
             ApiHelper.SharedInstance.GetRequest(apiRequestUrl,
+                // NOTE: Api callbacks aren't called in main thread.
                 response => InvokeOnMainThread(() =>
                 {
                     var data = JsonConvert.DeserializeObject<ApiResponseData>(response.Data);
@@ -49,10 +48,8 @@ namespace Xamarin.iOS.LinkedIn.Sample
                         _textView.Text = "Can't retrieve photo.";
                     }
                 }),
-                apiError => InvokeOnMainThread(() => 
-                {
-                    _textView.Text = apiError.ToString();
-                })
+                // NOTE: Api callbacks aren't called in main thread.
+                apiError => InvokeOnMainThread(() => _textView.Text = apiError.ToString())
            );
         }
 
