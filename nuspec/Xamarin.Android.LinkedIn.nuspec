@@ -7,6 +7,7 @@
     <authors>jzeferino</authors>
     <licenseUrl>https://github.com/jzeferino/Xamarin.LinkedId/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/jzeferino/Xamarin.LinkedIn</projectUrl>
+    <iconUrl>https://github.com/jzeferino/Xamarin.LinkedIn/blob/master/art/icon.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Xamarin.Android.LinkedIn binding library.</description>    
     <tags>xamarin, linkedIn</tags>
