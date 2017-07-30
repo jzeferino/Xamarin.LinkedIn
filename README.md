@@ -7,7 +7,7 @@ Bindings for Xamarin.Android and Xamarin.iOS of the LinkedIn mobile SDK.
 
 ## Demo
 <p align="center">
-<img src="https://github.com/jzeferino/Xamarin.LinkedIn/blob/master/art/icon?raw=true"/>
+<img src="https://github.com/jzeferino/Xamarin.LinkedIn/blob/master/art/icon.png"/>
 </p>
 
 | Binding                                     | Sample                                            | NuGet                                     |
