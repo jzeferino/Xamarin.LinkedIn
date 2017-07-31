@@ -12,30 +12,23 @@ namespace LinkedIn.Platform
     {
         public void Init(Activity activity, Scope scope, bool showGoToAppStoreDialog, Action onSuccess, Action<LIAuthError> onError)
         {
-            var listener = new AuthListener(onSuccess, onError);
-            Init(activity, scope, listener, showGoToAppStoreDialog);
+            Init(activity, scope, new AuthListener(onSuccess, onError), showGoToAppStoreDialog);
         }
 
         private class AuthListener : Java.Lang.Object, IAuthListener
         {
-            readonly Action onSuccess;
-            readonly Action<LIAuthError> onError;
+            private readonly Action _onSuccess;
+            private readonly Action<LIAuthError> _onError;
 
             public AuthListener(Action onSuccess, Action<LIAuthError> onError)
             {
-                this.onError = onError;
-                this.onSuccess = onSuccess;
+                _onError = onError;
+                _onSuccess = onSuccess;
             }
 
-            public void OnAuthError(LIAuthError error)
-            {
-                onError?.Invoke(error);
-            }
+            public void OnAuthError(LIAuthError error) => _onError?.Invoke(error);
 
-            public void OnAuthSuccess()
-            {
-                onSuccess?.Invoke();
-            }
+            public void OnAuthSuccess() => _onSuccess?.Invoke();
         }
     }
 }

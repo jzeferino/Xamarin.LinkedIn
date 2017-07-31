@@ -12,60 +12,48 @@ namespace LinkedIn.Platform
     {
         public void GetRequest(Context context, string url, Action<ApiResponse> onSuccess, Action<LIApiError> onError)
         {
-            var listener = new ApiListener(onSuccess, onError);
-            GetRequest(context, url, listener);
+            GetRequest(context, url, new ApiListener(onSuccess, onError));
         }
 
         public void DeleteRequest(Context context, string url, Action<ApiResponse> onSuccess, Action<LIApiError> onError)
         {
-            var listener = new ApiListener(onSuccess, onError);
-            DeleteRequest(context, url, listener);
+            DeleteRequest(context, url, new ApiListener(onSuccess, onError));
         }
 
         public void PostRequest(Context context, string url, JSONObject body, Action<ApiResponse> onSuccess, Action<LIApiError> onError)
         {
-            var listener = new ApiListener(onSuccess, onError);
-            PostRequest(context, url, body, listener);
+            PostRequest(context, url, body, new ApiListener(onSuccess, onError));
         }
 
         public void PostRequest(Context context, string url, string body, Action<ApiResponse> onSuccess, Action<LIApiError> onError)
         {
-            var listener = new ApiListener(onSuccess, onError);
-            PostRequest(context, url, body, listener);
+            PostRequest(context, url, body, new ApiListener(onSuccess, onError));
         }
 
         public void PutRequest(Context context, string url, JSONObject body, Action<ApiResponse> onSuccess, Action<LIApiError> onError)
         {
-            var listener = new ApiListener(onSuccess, onError);
-            PutRequest(context, url, body, listener);
+            PutRequest(context, url, body, new ApiListener(onSuccess, onError));
         }
 
         public void PutRequest(Context context, string url, string body, Action<ApiResponse> onSuccess, Action<LIApiError> onError)
         {
-            var listener = new ApiListener(onSuccess, onError);
-            PutRequest(context, url, body, listener);
+            PutRequest(context, url, body, new ApiListener(onSuccess, onError));
         }
 
         private class ApiListener : Java.Lang.Object, IApiListener
         {
-            readonly Action<ApiResponse> onSuccess;
-            readonly Action<LIApiError> onError;
+            private readonly Action<ApiResponse> _onSuccess;
+            private readonly Action<LIApiError> _onError;
 
             public ApiListener(Action<ApiResponse> onSuccess, Action<LIApiError> onError)
             {
-                this.onError = onError;
-                this.onSuccess = onSuccess;
+                _onError = onError;
+                _onSuccess = onSuccess;
             }
 
-            public void OnApiError(LIApiError error)
-            {
-                onError?.Invoke(error);
-            }
+            public void OnApiError(LIApiError error) => _onError?.Invoke(error);
 
-            public void OnApiSuccess(ApiResponse response)
-            {
-                onSuccess?.Invoke(response);
-            }
+            public void OnApiSuccess(ApiResponse response) => _onSuccess?.Invoke(response);
         }
     }
 }

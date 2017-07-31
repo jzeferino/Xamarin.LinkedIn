@@ -11,36 +11,28 @@ namespace LinkedIn.Platform
     {
         public void OpenCurrentProfile(Activity activity, Action onSuccess, Action<LIDeepLinkError> onError)
         {
-            var listener = new DeepLinkListener(onSuccess, onError);
-            OpenCurrentProfile(activity, listener);
+            OpenCurrentProfile(activity, new DeepLinkListener(onSuccess, onError));
         }
 
         public void OpenOtherProfile(Activity activity, string memberId, Action onSuccess, Action<LIDeepLinkError> onError)
         {
-            var listener = new DeepLinkListener(onSuccess, onError);
-            OpenOtherProfile(activity, memberId, listener);
+            OpenOtherProfile(activity, memberId, new DeepLinkListener(onSuccess, onError));
         }
 
         private class DeepLinkListener : Java.Lang.Object, IDeepLinkListener
         {
-            readonly Action onSuccess;
-            readonly Action<LIDeepLinkError> onError;
+            private readonly Action _onSuccess;
+            private readonly Action<LIDeepLinkError> _onError;
 
             public DeepLinkListener(Action onSuccess, Action<LIDeepLinkError> onError)
             {
-                this.onError = onError;
-                this.onSuccess = onSuccess;
+                _onError = onError;
+                _onSuccess = onSuccess;
             }
 
-            public void OnDeepLinkError(LIDeepLinkError error)
-            {
-                onError?.Invoke(error);
-            }
+            public void OnDeepLinkError(LIDeepLinkError error) => _onError?.Invoke(error);
 
-            public void OnDeepLinkSuccess()
-            {
-                onSuccess?.Invoke();
-            }
+            public void OnDeepLinkSuccess() => _onSuccess?.Invoke();
         }
     }
 }
