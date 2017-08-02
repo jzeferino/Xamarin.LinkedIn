@@ -19,7 +19,7 @@ var iOSSample = GetFiles("./src/samples/Xamarin.iOS.LinkedIn.Sample/*.csproj").F
 var artifactsDirectory = new DirectoryPath("artifacts");
 
 // Versioning. Used for all the packages and assemblies for now.
-var version = CreateSemVer(1, 0, 0);
+var version = CreateSemVer(1, 0, 1);
 
 Setup((context) =>
 {
