@@ -80,17 +80,15 @@ This method takes the following arguments:
 * `ApiListener` - An implementation of `ApiListener` to handle the response from the API call.  The `OnApiSuccess()` and `OnApiError()` methods should be overridden to handle the result of the call in a manner that makes sense to your application.
 
 ```c#
-APIHelper.GetInstance(this).GetRequest(this, "https://api.linkedin.com/v1/people/~", this);
-
-public void OnApiError(LIApiError p0)
-{
-    // do something with error
-}
-
-public void OnApiSuccess(ApiResponse apiResponse)
-{
-    // do something with response
-}
+APIHelper.GetInstance(this).GetRequest(this, "https://api.linkedin.com/v1/people/~", 
+    apiResponse =>
+    {
+        // do something with response
+    },
+    error =>
+    {
+        // do something with error
+    });
 ```
 
 [docs-sdk]: https://developer.linkedin.com/docs/android-sdk
