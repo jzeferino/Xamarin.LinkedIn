@@ -52,17 +52,16 @@ to LinkedIn to perform additional SDK operations with.
 _linkedInInstance = LISessionManager.GetInstance(this);
 
 // Request the authentication.
-_linkedInInstance.Init(this, Scope.Build(Scope.RBasicprofile), this, true);
+_linkedInInstance.Init(this, Scope.Build(Scope.RBasicprofile), true,
+    () =>
+    {
+        // Authentication succeeded.
+    },
+    error =>
+    {
+        // Error authenticating.
+    });
 
-protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-{
-    base.OnActivityResult(requestCode, resultCode, data);
-    _linkedInInstance.OnActivityResult(this, requestCode, (int)resultCode, data);
-}
-
-public void OnAuthError(LIAuthError p0) => _textview.Text = p0.ToString();
-
-public void OnAuthSuccess() => GetUserPhotoUrl();
 ````
 
 ## Making Authenticated REST API calls
