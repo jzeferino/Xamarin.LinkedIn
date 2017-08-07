@@ -159,7 +159,7 @@ access token is found, or the access token has expired, the user will be
 directed to the official LinkedIn application to acquire a new one.
 
 ```c#
-public static void CreateSession (
+public static void CreateSessionWithAuth (
     string[] permissions, 
     string state, 
     bool showDialog, 
@@ -187,10 +187,11 @@ Below you will find an example of what the connection initialization portion of
 a typical authentication process might look like:
 
 ```c#
-SessionManager.CreateSession (
+SessionManager.CreateSessionWithAuth (
     new []{ Permission.BasicProfile, Permission.EmailAddress },
     null,
     true,
+    // NOTE: success callbacks aren't called in main thread. Use InvokeOnMainThread() when accessing UI.
     returnState => {
         Console.WriteLine ("Sign in was successful.");
         var session = SessionManager.SharedInstance.Session;
@@ -208,7 +209,7 @@ LinkedIn `Session` rather than requesting a brand new one.  Serialize your acces
 token (using `AccessToken.SerializedString`) and provide it as an argument to the 
 following method:
 ```c#
-public static void CreateSession (AccessToken accessToken);
+public static void CreateSessionWithAccessToken (AccessToken accessToken);
 ```	
 This variant takes the following argument:
 
@@ -241,9 +242,11 @@ basic profile details for the member:
 if (SessionManager.HasValidSession) {
     ApiHelper.SharedInstance.GetRequest (
         "https://api.linkedin.com/v1/people/~",
+        // NOTE: Api callbacks aren't called in main thread. Use InvokeOnMainThread() when accessing UI.
         response => {
             // do something with response
         },
+        // NOTE: Api callbacks aren't called in main thread. Use InvokeOnMainThread() when accessing UI.
         apiError => {
             // do something with error
         });
