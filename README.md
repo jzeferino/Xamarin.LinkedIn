@@ -11,8 +11,8 @@ Bindings for Xamarin.Android and Xamarin.iOS of the LinkedIn mobile SDK.
 
 | Binding                                     | Sample                                            | NuGet                                     |
 |---------------------------------------------|---------------------------------------------------|-------------------------------------------|
-| [Xamarin.Android.LinkedIn][binding-android] | [Xamarin.Android.LinkedIn.Sample][android-sample] | [Xamarin.Android.LinkedIn][nuget-android] |
-| [Xamarin.iOS.LinkedIn][binding-ios]         | [Xamarin.iOS.LinkedIn.Sample][ios-sample]         | [Xamarin.iOS.LinkedIn][nuget-ios]         |
+| [Xamarin.Android.LinkedIn][binding-android] | [Xamarin.Android.LinkedIn.Sample][android-sample] | [![NuGet](https://img.shields.io/nuget/v/Xamarin.Android.LinkedIn.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.Android.LinkedIn/) |
+| [Xamarin.iOS.LinkedIn][binding-ios]         | [Xamarin.iOS.LinkedIn.Sample][ios-sample]         | [![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.LinkedIn.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.LinkedIn/)         |
 
 ## Run the samples
 
@@ -34,8 +34,6 @@ For a complete usage of the bindings, please follow the [samples][samples] and r
 [binding-ios]: src/Xamarin.iOS.LinkedIn/
 [android-sample]: src/samples/Xamarin.Android.LinkedIn.Sample/
 [ios-sample]: src/samples/Xamarin.iOS.LinkedIn.Sample/
-[nuget-android]: https://www.nuget.org/packages/Xamarin.Android.LinkedIn/
-[nuget-ios]: https://www.nuget.org/packages/Xamarin.iOS.LinkedIn/
 [samples]: src/samples/
 
 ### License
