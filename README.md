@@ -16,7 +16,7 @@ Bindings for Xamarin.Android and Xamarin.iOS of the LinkedIn mobile SDK.
 
 ## Run the samples
 
-For a complete usage of the bindings, please follow the [samples][samples] and read the original documentation for [Android][docs-sdk-android] and [iOS][docs-sdk-ios].
+For a complete usage of the bindings, please follow the [samples][samples] and read the official documentation for [Android][docs-sdk-android] and [iOS][docs-sdk-ios].
 
 * The Xamarin.Android.LinkedIn.Sample works out of the box, in any device that has LinkedIn installed.
 
