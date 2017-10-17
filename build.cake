@@ -1,4 +1,5 @@
-#addin Cake.SemVer
+#addin nuget:?package=Cake.SemVer&version=2.0.0
+#addin nuget:?package=semver&version=2.0.4
 
 // Enviroment
 var isRunningBitrise = Bitrise.IsRunningOnBitrise;
