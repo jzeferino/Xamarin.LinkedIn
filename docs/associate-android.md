@@ -1,4 +1,4 @@
-## Associate your iOS app with your LinkedIn app
+## Associate your Android app with your LinkedIn app
 
 See [complete docs][docs-sdk] by LinkedIn.
 
