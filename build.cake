@@ -1,5 +1,4 @@
-#addin nuget:?package=Cake.SemVer&version=2.0.0
-#addin nuget:?package=semver&version=2.0.4
+#addin nuget:?package=Cake.SemVer&loaddependencies=true
 
 // Enviroment
 var isRunningBitrise = Bitrise.IsRunningOnBitrise;
@@ -34,7 +33,7 @@ Task("Clean")
 	{	
 		CleanDirectory(artifactsDirectory);
 
-		DotNetBuild(solutionFile, settings => settings
+		MSBuild(solutionFile, settings => settings
 				.SetConfiguration(configuration)
 				.WithTarget("Clean")
 				.SetVerbosity(Verbosity.Minimal));
@@ -57,12 +56,12 @@ Task("Build-Samples")
 	.IsDependentOn("Restore")
 	.Does(() =>  
 	{	
-		DotNetBuild(androidSample, settings => settings
+		MSBuild(androidSample, settings => settings
 					.SetConfiguration(configuration)
 					.WithTarget("Build")
 					.SetVerbosity(Verbosity.Minimal));
 
-		DotNetBuild(iOSSample, settings => settings
+		MSBuild(iOSSample, settings => settings
 					.SetConfiguration(configuration)
 					.WithTarget("Build")
 					.WithProperty("Platform", "iPhoneSimulator")
@@ -78,7 +77,7 @@ Task("Build-Android-Library")
 	.IsDependentOn("Restore")
 	.Does(() =>  
 	{	
-		DotNetBuild(androidLibrary, settings => settings
+		MSBuild(androidLibrary, settings => settings
 					.SetConfiguration(configuration)
 					.WithTarget("Build")
 					.SetVerbosity(Verbosity.Minimal));
@@ -89,7 +88,7 @@ Task("Build-iOS-Library")
 	.IsDependentOn("Restore")
 	.Does(() =>  
 	{	
-		DotNetBuild(iOSLibrary, settings => settings
+		MSBuild(iOSLibrary, settings => settings
 					.SetConfiguration(configuration)
 					.WithTarget("Build")
 					.SetVerbosity(Verbosity.Minimal));
