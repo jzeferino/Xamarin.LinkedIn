@@ -1,4 +1,4 @@
-[![Build Status](https://www.bitrise.io/app/c682a090b3a7c1e7/status.svg?token=_xbX7Yn9LEMHfOFB2kMzng&branch=master)](https://www.bitrise.io/app/c682a090b3a7c1e7)
+[![Build Status](https://app.bitrise.io/app/c682a090b3a7c1e7/status.svg?token=_xbX7Yn9LEMHfOFB2kMzng&branch=master)](https://app.bitrise.io/app/c682a090b3a7c1e7)
 
 Xamarin.LinkedIn
 ===================
